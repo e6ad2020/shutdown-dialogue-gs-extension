@@ -1,5 +1,5 @@
 #!/bin/bash
 
-cd shutdown-dialogue@subashghimire.info.np
+cd power-menu@e6ad2020
 
-zip -r ../shutdown-dialogue@subashghimire.info.np.zip . -x "schemas/gschemas.compiled"
+zip -r ../power-menu@e6ad2020.zip . -x "schemas/gschemas.compiled"

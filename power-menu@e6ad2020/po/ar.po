@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Shutdown Dialogue\n"
+"Project-Id-Version: Power Menu\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-15 12:00+0000\n"
 "PO-Revision-Date: 2026-04-15 12:00+0000\n"
@@ -45,11 +45,11 @@ msgstr "الإجراءات"
 
 #: prefs.js
 msgid "Dialogue Actions"
-msgstr "إجراءات نافذة الإيقاف"
+msgstr "إجراءات نافذة الطاقة"
 
 #: prefs.js
 msgid "Configure which actions appear in the shutdown dialogue and their order. Use the arrow buttons to reorder."
-msgstr "اختر الإجراءات التي تظهر في نافذة الإيقاف وترتيبها. استخدم أزرار الأسهم لإعادة الترتيب."
+msgstr "اختر الإجراءات التي تظهر في نافذة الطاقة وترتيبها. استخدم أزرار الأسهم لإعادة الترتيب."
 
 #: prefs.js
 msgid "Move up"

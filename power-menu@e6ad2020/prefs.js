@@ -15,7 +15,7 @@ const ACTION_DEFINITIONS = {
 export default class ShutdownDialoguePreferences extends ExtensionPreferences {
 
     fillPreferencesWindow(window) {
-        const settings = this.getSettings('org.gnome.shell.extensions.shutdown-dialogue');
+        const settings = this.getSettings('org.gnome.shell.extensions.power-menu');
 
         window.set_default_size(500, 500);
 

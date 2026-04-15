@@ -14,7 +14,7 @@ export default class ShutdownDialogueExtension extends Extension {
 
 	enable() {
 		this._wmKeybindingsSettings = new Gio.Settings({ schema_id: 'org.gnome.desktop.wm.keybindings' });
-		this._customKeybindingsSettings = this.getSettings('org.gnome.shell.extensions.shutdown-dialogue');
+		this._customKeybindingsSettings = this.getSettings('org.gnome.shell.extensions.power-menu');
 		this._disableCloseBinding();
 		this._enableCustomAltF4Binding();
 		this._selectedOptionIndex = 0;
@@ -63,7 +63,7 @@ export default class ShutdownDialogueExtension extends Extension {
 
 			activeWindow.delete(currentTime);
 		} catch (error) {
-			console.error('[Shutdown Dialogue] Error:', error);
+			console.error('[Power Menu] Error:', error);
 			this._showShutdownDialogue();
 		}
 	}
@@ -76,7 +76,7 @@ export default class ShutdownDialogueExtension extends Extension {
 
 		this._dialog = new ModalDialog.ModalDialog({
 			destroyOnClose: false,
-			styleClass: 'shutdown-dialogue',
+			styleClass: 'power-menu',
 		});
 
 		const dialog = this._dialog;
@@ -252,12 +252,12 @@ export default class ShutdownDialogueExtension extends Extension {
 						try {
 							conn.call_finish(res);
 						} catch (e) {
-							console.error(`[Shutdown Dialogue] Failed to call ${method}: ${e.message}`);
+							console.error(`[Power Menu] Failed to call ${method}: ${e.message}`);
 						}
 					}
 				);
 			} catch (e) {
-				console.error('[Shutdown Dialogue] Failed to get system bus:', e);
+				console.error('[Power Menu] Failed to get system bus:', e);
 			}
 		});
 	}

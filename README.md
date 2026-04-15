@@ -1,32 +1,27 @@
-# Shutdown Dialogue Extension
+# Power Menu
 
-This GNOME Shell extension provides a custom keybinding for Alt+F4 to show a shutdown dialogue when no windows are open.
+This GNOME Shell extension provides a custom keybinding (default Alt+F4) to show a power dialogue (Shutdown, Restart, Suspend, Log Out) when no windows are open.
 
 # Screenshots
 
-![Shutdown Dialogue](./assets/shutdown-dialogue.png)
+![Power Menu](./assets/icon.png)
 
 ## Features
 
 - Overrides the default Alt+F4 keybinding.
 - Shows a notification when Alt+F4 is pressed and no windows are open.
 - Restores the original keybinding when the extension is disabled.
+- Customizable action order and visibility in settings.
+- Mouse support (hover selection and click confirmation).
+- Supports GNOME 45 up to 50.
 
 ## Installation
-
-### Automatic Installation
-
-1. Install the extension from the GNOME Extensions website:
-    
-    [Shutdown Dialogue Extension](https://extensions.gnome.org/extension/7444/shutdown-dialogue/)
-    
-    [![Install on GNOME Shell](https://pbs.twimg.com/media/D6s8OS2U8AAaLNQ.png)](https://extensions.gnome.org/extension/7444/shutdown-dialogue/)
 
 ### Manual Installation
 
 1. Clone the repository to your local machine:
     ```sh
-    git clone https://github.com/PublisherName/shutdown-dialogue-gs-extension.git
+    git clone https://github.com/e6ad2020/shutdown-dialogue-gs-extension.git
     ```
 
 2. Navigate to the extension directory:
@@ -34,30 +29,22 @@ This GNOME Shell extension provides a custom keybinding for Alt+F4 to show a shu
     cd shutdown-dialogue-gs-extension
     ```
 
-3. Copy the extension to the GNOME Shell extensions directory:
+3. Install the extension:
     ```sh
-    ./build.sh
+    ./install.sh
     ```
 
 4. Restart GNOME Shell:
-    ```sh
-    Press Alt+F2, type 'r', and press Enter
-    ```
+    - **Wayland:** Log out and log back in.
+    - **X11:** Press Alt+F2, type 'r', and press Enter.
 
-5. Enable the extension using GNOME Tweaks or Extensions app.
+5. Enable the extension using GNOME Extensions app.
 
 ## Usage
 
-- Press Alt+F4 to trigger the shutdown dialogue when no windows are open.
-- The extension will show a dialogue when no windows are open and asking if you want to shut down.
-
-## Contributing
-
-Contributions are welcome! Please open an issue or submit a pull request.
-
-## Icon Credits
-
-Icons from [icon-icons.com](https://icon-icons.com/icon/blue-shutdown-power-off-/11699):
+- Press Alt+F4 to trigger the power dialogue when no windows are open.
+- Use arrow keys or mouse to select an action.
+- Press Enter or click to confirm.
 
 ## License
 

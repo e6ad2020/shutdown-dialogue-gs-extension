@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist>
-  <schema id="org.gnome.shell.extensions.shutdown-dialogue" path="/org/gnome/shell/extensions/shutdown-dialogue/">
+  <schema id="org.gnome.shell.extensions.power-menu" path="/org/gnome/shell/extensions/power-menu/">
     <key name="custom-alt-f4" type="as">
     <default><![CDATA[['<Alt>F4']]]></default>
       <summary>Custom keybinding for Alt+F4</summary>
@@ -8,13 +8,13 @@
     </key>
     <key name="action-order" type="as">
       <default>['poweroff', 'suspend', 'reboot', 'logout']</default>
-      <summary>Order of actions in the shutdown dialogue</summary>
-      <description>The order of actions displayed in the shutdown dialogue. Available actions: poweroff, suspend, reboot, logout.</description>
+      <summary>Order of actions in the power menu</summary>
+      <description>The order of actions displayed in the power menu. Available actions: poweroff, suspend, reboot, logout.</description>
     </key>
     <key name="action-visibility" type="as">
       <default>['poweroff', 'suspend', 'reboot', 'logout']</default>
-      <summary>Visible actions in the shutdown dialogue</summary>
-      <description>List of actions that are visible in the shutdown dialogue. Only actions listed here will be shown.</description>
+      <summary>Visible actions in the power menu</summary>
+      <description>List of actions that are visible in the power menu. Only actions listed here will be shown.</description>
     </key>
   </schema>
 </schemalist>
