@@ -7,7 +7,7 @@
 <p align="center">
   A modern, interactive power dialogue for GNOME Shell.
   <br>
-  Easily manage your session with Shutdown, Restart, Suspend, and Log Out options.
+  Triggered with <b>Alt + F4</b> on the desktop to manage Shutdown, Restart, Suspend, and Log Out.
 </p>
 
 <p align="center">
