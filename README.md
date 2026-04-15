@@ -4,7 +4,9 @@ This GNOME Shell extension provides a custom keybinding (default Alt+F4) to show
 
 # Screenshots
 
-![Power Menu](./assets/icon.png)
+![Power Menu](./assets/icon.svg)
+
+![Preview](./assets/preview.png)
 
 ## Features
 
