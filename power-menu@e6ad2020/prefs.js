@@ -1,3 +1,11 @@
+/*
+ * Power Menu for GNOME Shell
+ *
+ * Preferences window logic for configuring the power menu actions.
+ *
+ * License: MIT
+ */
+
 import Adw from 'gi://Adw';
 import Gtk from 'gi://Gtk';
 import Gio from 'gi://Gio';
@@ -12,8 +20,16 @@ const ACTION_DEFINITIONS = {
     'logout': { name: 'Log Out', icon: 'system-log-out-symbolic' },
 };
 
-export default class ShutdownDialoguePreferences extends ExtensionPreferences {
+/**
+ * Preferences window for the Power Menu extension
+ */
+export default class PowerMenuPreferences extends ExtensionPreferences {
 
+    /**
+     * Setup the preferences UI
+     *
+     * @param {Adw.PreferencesWindow} window - The preferences window provided by GNOME
+     */
     fillPreferencesWindow(window) {
         const settings = this.getSettings('org.gnome.shell.extensions.power-menu');
 
@@ -57,6 +73,9 @@ export default class ShutdownDialoguePreferences extends ExtensionPreferences {
         });
     }
 
+    /**
+     * Build the list of actions in the preferences UI
+     */
     _buildRows() {
         // Remove existing rows
         for (const row of this._rows) {
@@ -128,6 +147,12 @@ export default class ShutdownDialoguePreferences extends ExtensionPreferences {
         }
     }
 
+    /**
+     * Reorder an action
+     *
+     * @param {string} actionId - Action to move
+     * @param {number} direction - -1 for up, 1 for down
+     */
     _moveAction(actionId, direction) {
         const order = this._settings.get_strv('action-order');
         const index = order.indexOf(actionId);
@@ -136,10 +161,10 @@ export default class ShutdownDialoguePreferences extends ExtensionPreferences {
         const newIndex = index + direction;
         if (newIndex < 0 || newIndex >= order.length) return;
 
-        // Swap
+        // Swap elements
         [order[index], order[newIndex]] = [order[newIndex], order[index]];
 
-        // Block signal to avoid rebuild loop
+        // Block signals to avoid recursive UI rebuilds
         if (this._orderChangedId) {
             this._settings.block_signal_handler(this._orderChangedId);
         }
@@ -151,6 +176,12 @@ export default class ShutdownDialoguePreferences extends ExtensionPreferences {
         this._buildRows();
     }
 
+    /**
+     * Toggle visibility of an action
+     *
+     * @param {string} actionId - Target action
+     * @param {boolean} visible - Visibility state
+     */
     _setActionVisibility(actionId, visible) {
         const visibility = this._settings.get_strv('action-visibility');
         const index = visibility.indexOf(actionId);
@@ -161,7 +192,7 @@ export default class ShutdownDialoguePreferences extends ExtensionPreferences {
             visibility.splice(index, 1);
         }
 
-        // Block signal to avoid rebuild loop
+        // Block signals to avoid recursive UI rebuilds
         if (this._visibilityChangedId) {
             this._settings.block_signal_handler(this._visibilityChangedId);
         }

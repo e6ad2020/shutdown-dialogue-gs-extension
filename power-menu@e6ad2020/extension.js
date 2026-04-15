@@ -1,3 +1,11 @@
+/*
+ * Power Menu for GNOME Shell
+ *
+ * This extension provides a modern power menu dialogue triggered by Alt+F4.
+ *
+ * License: MIT
+ */
+
 import Gio from 'gi://Gio';
 import Meta from 'gi://Meta';
 import Shell from 'gi://Shell';
@@ -10,8 +18,11 @@ import * as Main from 'resource:///org/gnome/shell/ui/main.js';
 import * as ModalDialog from 'resource:///org/gnome/shell/ui/modalDialog.js';
 import { setKeybinding, removeKeybinding } from './utils/utils.js';
 
-export default class ShutdownDialogueExtension extends Extension {
+export default class PowerMenuExtension extends Extension {
 
+    /**
+     * Initialize extension settings and keybindings
+     */
 	enable() {
 		this._wmKeybindingsSettings = new Gio.Settings({ schema_id: 'org.gnome.desktop.wm.keybindings' });
 		this._customKeybindingsSettings = this.getSettings('org.gnome.shell.extensions.power-menu');
@@ -20,6 +31,9 @@ export default class ShutdownDialogueExtension extends Extension {
 		this._selectedOptionIndex = 0;
 	}
 
+    /**
+     * Cleanup on extension disable
+     */
 	disable() {
 		this._disableCustomAltF4Binding();
 		this._enableCloseBinding();
@@ -68,6 +82,9 @@ export default class ShutdownDialogueExtension extends Extension {
 		}
 	}
 
+    /**
+     * Create and show the modal power dialogue
+     */
 	_showShutdownDialogue() {
 		if (this._dialog) {
 			this._dialog.close();
@@ -219,6 +236,11 @@ export default class ShutdownDialogueExtension extends Extension {
 		});
 	}
 
+    /**
+     * Invoke the system action via DBus (logind)
+     *
+     * @param {string} action - The action ID to execute
+     */
 	_executeAction(action) {
 		if (action === 'logout') {
 			const command = ['/usr/bin/gnome-session-quit', '--logout', '--no-prompt'];
