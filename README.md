@@ -27,10 +27,10 @@
 
 ---
 
-### Screenshots
+### Screenshot
 
 <p align="center">
-  <img src="./assets/preview.png" alt="Power Menu Preview" width="600">
+  <img src="./assets/preview.png" alt="Power Menu Preview" width="500">
 </p>
 
 ---
