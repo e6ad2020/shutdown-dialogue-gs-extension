@@ -2,7 +2,7 @@
     "uuid": "power-menu@e6ad2020",
     "name": "Power Menu",
     "description": "Power Menu for GNOME - Advanced session controls (Shutdown, Restart, Suspend, Log Out)",
-    "url": "https://github.com/e6ad2020/shutdown-dialogue-gs-extension",
+    "url": "https://github.com/e6ad2020/power-menu-gs-extension",
     "shell-version": [
         "45",
         "46",

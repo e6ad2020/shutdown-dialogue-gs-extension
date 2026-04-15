@@ -23,7 +23,7 @@ This GNOME Shell extension provides a custom keybinding (default Alt+F4) to show
 
 1. Clone the repository to your local machine:
     ```sh
-    git clone https://github.com/e6ad2020/shutdown-dialogue-gs-extension.git
+    git clone https://github.com/e6ad2020/power-menu-gs-extension.git
     ```
 
 2. Navigate to the extension directory:
