@@ -1,0 +1,60 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Power Menu\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-03 09:00+0200\n"
+"PO-Revision-Date: 2026-05-03 09:00+0200\n"
+"Last-Translator: \n"
+"Language-Team: German\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: extension.js
+msgid "Select an action:"
+msgstr "Wähle eine Aktion aus:"
+
+#: extension.js prefs.js
+msgid "Shutdown"
+msgstr "Herunterfahren"
+
+#: extension.js prefs.js
+msgid "Suspend"
+msgstr "Bereitschaft"
+
+#: extension.js prefs.js
+msgid "Restart"
+msgstr "Neustarten"
+
+#: extension.js prefs.js
+msgid "Log Out"
+msgstr "Abmelden"
+
+#: extension.js
+msgid "OK"
+msgstr "OK"
+
+#: extension.js
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#: prefs.js
+msgid "Actions"
+msgstr "Aktionen"
+
+#: prefs.js
+msgid "Dialogue Actions"
+msgstr "Dialogaktionen"
+
+#: prefs.js
+msgid "Configure which actions appear in the shutdown dialogue and their order. Use the arrow buttons to reorder."
+msgstr "Lege fest, welche Aktionen im Herunterfahren-Dialog angezeigt werden und in welcher Reihenfolge. Verwende die Pfeiltasten, um die Reihenfolge zu ändern."
+
+#: prefs.js
+msgid "Move up"
+msgstr "Nach oben"
+
+#: prefs.js
+msgid "Move down"
+msgstr "Nach unten"
